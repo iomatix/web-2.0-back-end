@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  div(class="container")
+    h1= title
+    p Welcome to #{title}
+    form(class="form-signin", action='addIt/add_item', method='POST')
+      p
+        | Nazwa 
+        input(class='form-control', type='text', name='name', value='')
+        | Opis 
+        input(class='form-control', type='text', name='desc', value='')
+        | Cena
+        input(class='form-control', type='range',min='0.99',max='2500', step='0.01', name='price', value='1.99', oninput="this.nextElementSibling.value = this.value + ' $'")
+        output 1.99 $
+      input(class='btn btn-primary' type='submit', value='Dodaj Przedmiot')

@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  div(class="container")
+    h1= title
+    p Welcome to #{title}
+    div(class="container")  
+      each element in contents
+        div(class="row")
+          form(class="form-signin" method="POST" action="/removeIt/remove")
+            button(name=element.name id=element.name class="form-control" disabled=true class="btn-dark") #{element.name} - #{element.price} $
+            input(disabled=false type="text" name="valueName" id="valueNameID" value=element.name hidden=true)
+            button(type="submit" name=element.name+'DEL' id=element.name+'DEL' class="form-control" class="btn btn-danger") USUŃ
+

@@ -1,0 +1,11 @@
+extends layout
+block content
+    div.text-center
+        div(class="form-signin")
+            div.text-center
+                h4 Zalogowano jako 
+                h3 #{username}
+                p
+                p Za chwilę zostaniesz przekierowany...
+    script.
+        setTimeout(function () {window.location = "/";}, 3000)

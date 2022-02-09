@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  div(class="container-sm")
+    div(class="row")
+      div(class="col-sm")
+      a(class='btn btn-primary', href='/users/login') Zaloguj się
+      div(class="col-sm")
+      a(class='btn btn-primary', href='/users/register') Załóż Konto
+      div(class="col-sm")
+      a(class='btn btn-primary', href='/addIt') Dodaj Przedmiot
+      div(class="col-sm")
+      a(class='btn btn-primary', href='/removeIt') Usuń Przedmiot
+      div(class="col-sm")
+      a(class='btn btn-primary', href='/API') REST

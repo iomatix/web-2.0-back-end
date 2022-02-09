@@ -1,0 +1,12 @@
+extends layout
+block content
+    div.text-center
+        div(class="container")
+            div.text-center
+                h4 Usunięto rekord dla bazy MongoDB:
+                h3 #{name}
+                p 
+                p
+                p Za chwilę zostaniesz przekierowany...
+    script.
+        setTimeout(function () {window.location = "/";}, 3500)

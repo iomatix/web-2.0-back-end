@@ -1,0 +1,14 @@
+extends layout
+block content
+    div.text-center
+        div(class="container")
+            div.text-center
+                h1 REST API
+                h3 Instrukcja Obsługi
+                p 
+                p [GET] /API/GetItems - Zwraca listę przedmiotów.
+                p [GET] /API/GetItems/:id - Zwraca przedmiot o podanej nazwie.
+                p [POST] /API/CreateItem/:obiekt - Tworzy nowy przedmiot z zadanym body. Wymagane: name, desc, price.
+                p [PUT] /API/CreateItem/:id - Modyfikuje przedmiot o wskazanej nazwie z przekazanym body. Wymagane: desc lub price.
+                p [DELETE] /API/DeleteItem/:id - Usuwa obiekt o podanej nazwie.
+

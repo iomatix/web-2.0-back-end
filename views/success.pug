@@ -1,0 +1,12 @@
+extends layout
+block content
+    div.text-center
+        div(class="container")
+            div.text-center
+                h4 Dodano lub zmodyfikowano rekord dla bazy MongoDB:
+                h3 #{name} - #{price} $
+                p #{desc} 
+                p
+                p Za chwilę zostaniesz przekierowany...
+    script.
+        setTimeout(function () {window.location = "/";}, 5000)
